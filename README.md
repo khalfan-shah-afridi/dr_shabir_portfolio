@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dr. Muhammad Shabir Afridi — Academic Portfolio & Admin CMS
 
 React (Vite) frontend + Node.js/Express backend + MongoDB/Mongoose.
@@ -145,3 +146,7 @@ above modules immediately reflects the change.
 
 **Note:** `pdfkit` was added to `server/package.json`. Run `npm install`
 in `server/` to fetch it before starting the backend.
+=======
+# dr_shabir_portfolio
+this is most advance level of portfolio auto cv gentratiion etc ,react java scritp ,mongo db
+>>>>>>> 054666d8621cc087ca96f0a2b52b826a119e80c3

@@ -1,0 +1,1027 @@
+/* =====================================================
+   RESEARCH PAPER SUBMISSION MANAGER
+   DARK GREY ADMIN DESIGN
+   ===================================================== */
+
+.research-paper-submission-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px;
+  background: #17191c;
+  color: #f1f3f5;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.submission-page-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.submission-eyebrow {
+  color: #9ca3af;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  margin-bottom: 8px;
+}
+
+.submission-page-header h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.submission-page-header p {
+  margin: 10px 0 0;
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   REFRESH
+   ===================================================== */
+
+.submission-refresh-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  border: 1px solid #3a3f46;
+  border-radius: 9px;
+
+  background: #24272c;
+  color: #e5e7eb;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.submission-refresh-button:hover {
+  background: #2d3137;
+  border-color: #555b64;
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   MESSAGES
+   ===================================================== */
+
+.submission-success-message {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+
+  border: 1px solid #28543a;
+  border-radius: 9px;
+
+  background: #192a20;
+  color: #9ee2b3;
+
+  font-size: 14px;
+}
+
+.submission-error-message {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+
+  border: 1px solid #633737;
+  border-radius: 9px;
+
+  background: #2b1b1b;
+  color: #f3a6a6;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   FORM CARD
+   ===================================================== */
+
+.submission-form-card {
+  width: 100%;
+  margin-bottom: 32px;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: #24272c;
+
+  border: 1px solid #373b42;
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.submission-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+
+  border-bottom: 1px solid #383c43;
+}
+
+.submission-section-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #8f98a3;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.submission-card-header h2 {
+  margin: 0;
+
+  color: #f3f4f6;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.submission-card-header p {
+  margin: 8px 0 0;
+
+  color: #969da7;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   CANCEL TOP
+   ===================================================== */
+
+.submission-cancel-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border: 1px solid #454a52;
+  border-radius: 8px;
+
+  background: #2c3036;
+  color: #d1d5db;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.submission-cancel-top:hover {
+  background: #363a41;
+}
+
+
+/* =====================================================
+   FORM GRID
+   ===================================================== */
+
+.submission-form {
+  width: 100%;
+}
+
+.submission-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 21px;
+}
+
+.submission-form-group {
+  min-width: 0;
+}
+
+.submission-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.submission-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d7dbe0;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUTS
+   ===================================================== */
+
+.submission-form-group input,
+.submission-form-group select {
+  width: 100%;
+  height: 46px;
+
+  box-sizing: border-box;
+
+  padding: 0 14px;
+
+  border: 1px solid #454a52;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #1c1f23;
+  color: #f1f3f5;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submission-form-group input::placeholder {
+  color: #707780;
+}
+
+.submission-form-group input:hover,
+.submission-form-group select:hover {
+  border-color: #555b64;
+  background: #1f2227;
+}
+
+.submission-form-group input:focus,
+.submission-form-group select:focus {
+  border-color: #707780;
+  background: #1d2024;
+
+  box-shadow:
+    0 0 0 3px rgba(156, 163, 175, 0.08);
+}
+
+.submission-form-group select {
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   DATE INPUT
+   ===================================================== */
+
+.submission-form-group input[type="date"] {
+  color-scheme: dark;
+}
+
+
+/* =====================================================
+   FILE UPLOAD
+   ===================================================== */
+
+.submission-file-box {
+  min-height: 105px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  box-sizing: border-box;
+
+  border: 1px dashed #555b64;
+  border-radius: 10px;
+
+  background: #1c1f23;
+
+  position: relative;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.submission-file-box:hover {
+  border-color: #737b86;
+  background: #202329;
+}
+
+.submission-file-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #2c3036;
+  color: #c8cdd3;
+}
+
+.submission-file-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.submission-file-info strong {
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.submission-file-info span {
+  color: #7f8791;
+  font-size: 12px;
+}
+
+.submission-file-box input[type="file"] {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.selected-pdf {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 10px;
+
+  padding: 10px 12px;
+
+  border-radius: 7px;
+
+  background: #1b2a21;
+  border: 1px solid #31533d;
+
+  color: #a7e0b8;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   FORM ACTIONS
+   ===================================================== */
+
+.submission-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 26px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #383c43;
+}
+
+.submission-clear-button,
+.submission-save-button {
+  height: 43px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 17px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.submission-clear-button {
+  border: 1px solid #444950;
+
+  background: #2a2d32;
+  color: #cdd1d6;
+}
+
+.submission-clear-button:hover {
+  background: #34383e;
+}
+
+.submission-save-button {
+  border: 1px solid #6b727c;
+
+  background: #3a3f46;
+  color: #ffffff;
+}
+
+.submission-save-button:hover {
+  background: #474d55;
+  transform: translateY(-1px);
+}
+
+.submission-save-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =====================================================
+   LIBRARY
+   ===================================================== */
+
+.submission-library {
+  width: 100%;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: #202328;
+
+  border: 1px solid #373b42;
+  border-radius: 14px;
+}
+
+.submission-library-header {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #383c43;
+}
+
+.submission-library-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 0;
+
+  color: #f3f4f6;
+
+  font-size: 21px;
+}
+
+.submission-library-header p {
+  margin: 8px 0 0;
+
+  color: #8e959f;
+
+  font-size: 13px;
+}
+
+.submission-count {
+  min-width: 27px;
+  height: 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  background: #30343a;
+  color: #cbd0d6;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.submission-loading {
+  min-height: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   EMPTY
+   ===================================================== */
+
+.submission-empty {
+  min-height: 240px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #777f89;
+}
+
+.submission-empty svg {
+  margin-bottom: 15px;
+  color: #555c65;
+}
+
+.submission-empty h3 {
+  margin: 0 0 7px;
+
+  color: #d5d9de;
+
+  font-size: 17px;
+}
+
+.submission-empty p {
+  margin: 0;
+
+  color: #858c95;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   SUBMISSION LIST
+   ===================================================== */
+
+.submission-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =====================================================
+   SUBMISSION ITEM
+   ===================================================== */
+
+.submission-item {
+  padding: 21px;
+
+  background: #282c31;
+
+  border: 1px solid #3a3f46;
+  border-radius: 11px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.submission-item:hover {
+  background: #2b2f35;
+  border-color: #50565f;
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   ITEM TOP
+   ===================================================== */
+
+.submission-item-top {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.submission-number {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #33373e;
+  color: #aeb4bc;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.submission-title-area {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.submission-title-area h3 {
+  margin: 2px 0 0;
+
+  color: #f0f2f4;
+
+  font-size: 17px;
+  line-height: 1.4;
+
+  font-weight: 650;
+}
+
+
+/* =====================================================
+   STATUS BADGE
+   ===================================================== */
+
+.submission-status {
+  flex-shrink: 0;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.submission-status.review {
+  background: #3a3426;
+  border: 1px solid #625535;
+  color: #d8c58d;
+}
+
+.submission-status.accepted {
+  background: #203528;
+  border: 1px solid #365b43;
+  color: #9dd8ac;
+}
+
+.submission-status.rejected {
+  background: #392728;
+  border: 1px solid #604042;
+  color: #e1a2a4;
+}
+
+.submission-status.changes {
+  background: #30302a;
+  border: 1px solid #595942;
+  color: #d0d09b;
+}
+
+
+/* =====================================================
+   DETAILS
+   ===================================================== */
+
+.submission-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.submission-detail {
+  min-width: 0;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  background: #202328;
+  border: 1px solid #353a40;
+}
+
+.submission-detail span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #777f89;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.submission-detail strong {
+  display: block;
+
+  color: #d8dce1;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  word-break: break-word;
+}
+
+
+/* =====================================================
+   STATUS CONTROL
+   ===================================================== */
+
+.submission-status-control {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 17px;
+}
+
+.submission-status-control label {
+  color: #9ba2ab;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.submission-status-control select {
+  min-width: 205px;
+  height: 38px;
+
+  padding: 0 11px;
+
+  border: 1px solid #454b53;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #1b1e22;
+  color: #dfe3e7;
+
+  cursor: pointer;
+
+  font-size: 12px;
+}
+
+.submission-status-control select:focus {
+  border-color: #6b727c;
+}
+
+
+/* =====================================================
+   ACTIONS
+   ===================================================== */
+
+.submission-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #383c42;
+}
+
+.submission-action {
+  min-height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+button.submission-action {
+  font-family: inherit;
+}
+
+.submission-action.pdf {
+  border: 1px solid #48505a;
+
+  background: #30353b;
+  color: #d9dde2;
+}
+
+.submission-action.pdf:hover {
+  background: #3a4047;
+}
+
+.submission-action.edit {
+  border: 1px solid #4c5057;
+
+  background: #303238;
+  color: #cfd3d8;
+}
+
+.submission-action.edit:hover {
+  background: #393c42;
+}
+
+.submission-action.delete {
+  border: 1px solid #633c3f;
+
+  background: #302326;
+  color: #dfa6a9;
+}
+
+.submission-action.delete:hover {
+  background: #3c292c;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .research-paper-submission-page {
+    padding: 22px;
+  }
+
+  .submission-details {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .research-paper-submission-page {
+    padding: 16px;
+  }
+
+  .submission-page-header {
+    flex-direction: column;
+  }
+
+  .submission-page-header h1 {
+    font-size: 25px;
+  }
+
+  .submission-form-card,
+  .submission-library {
+    padding: 20px;
+  }
+
+  .submission-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .submission-form-group.full-width {
+    grid-column: auto;
+  }
+
+  .submission-card-header {
+    flex-direction: column;
+  }
+
+  .submission-title-area {
+    flex-direction: column;
+  }
+
+  .submission-details {
+    grid-template-columns: 1fr;
+  }
+
+  .submission-status-control {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .submission-status-control select {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .research-paper-submission-page {
+    padding: 12px;
+  }
+
+  .submission-form-card,
+  .submission-library {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .submission-item {
+    padding: 16px;
+  }
+
+  .submission-item-top {
+    gap: 10px;
+  }
+
+  .submission-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .submission-title-area h3 {
+    font-size: 15px;
+  }
+
+  .submission-actions {
+    flex-direction: column;
+  }
+
+  .submission-action {
+    width: 100%;
+  }
+
+}

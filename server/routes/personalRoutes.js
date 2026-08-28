@@ -1,0 +1,2 @@
+const express=require("express"); const protect=require("../middleware/authMiddleware"); const c=require("../controllers/personalController"); const r=express.Router();
+r.get("/public",c.getPublic); r.get("/",protect,c.getAll); r.post("/",protect,c.create); r.put("/:id",protect,c.update); r.delete("/:id",protect,c.remove); r.patch("/:id/toggle",protect,c.toggle); module.exports=r;

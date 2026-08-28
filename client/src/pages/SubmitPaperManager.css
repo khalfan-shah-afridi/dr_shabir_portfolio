@@ -1,0 +1,515 @@
+/* =====================================================
+   SUBMIT PAPER PAGE
+===================================================== */
+
+.submit-paper-page {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  padding: 30px;
+  color: #eeeeee;
+}
+
+.submit-paper-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.submit-paper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.submit-paper-title-area {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.submit-paper-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+}
+
+.submit-paper-kicker {
+  display: block;
+  margin-bottom: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+
+  color: #999999;
+}
+
+.submit-paper-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.submit-paper-header p {
+  margin: 7px 0 0;
+
+  font-size: 14px;
+  color: #999999;
+}
+
+.submit-paper-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #cfcfcf;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.submit-success-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+  padding: 14px 17px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #dddddd;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.submit-paper-form-card {
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: rgba(25, 25, 27, 0.92);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.submit-form-heading {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.submit-form-heading span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: #888888;
+}
+
+.submit-form-heading h2 {
+  margin: 0;
+
+  font-size: 21px;
+
+  color: #ffffff;
+}
+
+.submit-form-heading p {
+  margin: 6px 0 0;
+
+  font-size: 13px;
+  color: #888888;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.submit-form-group {
+  margin-bottom: 21px;
+}
+
+.submit-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #d8d8d8;
+}
+
+.submit-form-group input,
+.submit-form-group select {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 14px;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #18181a;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: #eeeeee;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.submit-form-group input::placeholder {
+  color: #686868;
+}
+
+.submit-form-group input:focus,
+.submit-form-group select:focus {
+  border-color: rgba(255, 255, 255, 0.28);
+
+  background: #1c1c1e;
+}
+
+.submit-form-group select {
+  cursor: pointer;
+}
+
+.submit-form-group select option {
+  background: #1b1b1d;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   TWO COLUMN ROW
+===================================================== */
+
+.submit-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+
+/* =====================================================
+   PDF UPLOAD
+===================================================== */
+
+.submit-pdf-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 90px;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  background: #18181a;
+
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+.submit-pdf-box:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.submit-pdf-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: #dddddd;
+}
+
+.submit-pdf-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.submit-pdf-content strong {
+  font-size: 13px;
+  color: #eeeeee;
+}
+
+.submit-pdf-content span {
+  font-size: 11px;
+  color: #777777;
+}
+
+.submit-pdf-box input[type="file"] {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.selected-pdf {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 10px;
+  padding: 9px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #cfcfcf;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.submit-paper-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 28px;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.submit-paper-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 10px;
+
+  background: #eeeeee;
+
+  color: #111111;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.submit-paper-button:hover {
+  transform: translateY(-2px);
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.submit-paper-info {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin-top: 20px;
+  padding: 21px;
+
+  border-radius: 15px;
+
+  background: rgba(25, 25, 27, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.submit-info-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  color: #dddddd;
+}
+
+.submit-paper-info span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+
+  color: #777777;
+}
+
+.submit-paper-info h2 {
+  margin: 0;
+
+  font-size: 16px;
+
+  color: #eeeeee;
+}
+
+.submit-paper-info p {
+  margin: 7px 0 0;
+
+  max-width: 800px;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: #888888;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .submit-paper-page {
+    padding: 20px 15px;
+  }
+
+  .submit-paper-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .submit-paper-header h1 {
+    font-size: 24px;
+  }
+
+  .submit-paper-form-card {
+    padding: 20px;
+  }
+
+  .submit-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .submit-paper-actions {
+    justify-content: stretch;
+  }
+
+  .submit-paper-button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .submit-paper-title-area {
+    align-items: flex-start;
+  }
+
+  .submit-paper-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .submit-paper-header h1 {
+    font-size: 21px;
+  }
+
+}

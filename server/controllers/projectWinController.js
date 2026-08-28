@@ -1,0 +1,1 @@
+const make=require("../utils/crudController"); const Model=require("../models/ProjectWin"); module.exports=make(Model);

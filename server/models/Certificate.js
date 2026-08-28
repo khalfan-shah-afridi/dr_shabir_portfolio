@@ -1,0 +1,3 @@
+const mongoose = require("mongoose");
+const schema = new mongoose.Schema({ title:{type:String,required:true,trim:true}, issuer:{type:String,default:""}, category:{type:String,enum:["International Certification","Higher Education Faculty Training","National Certification","Other"],default:"Other"}, issueDate:{type:String,default:""}, pdf:{type:String,default:""}, pdfOriginalName:{type:String,default:""}, description:{type:String,default:""}, visible:{type:Boolean,default:true}, featured:{type:Boolean,default:false}, order:{type:Number,default:0} }, {timestamps:true, collection:"certificates"});
+module.exports = mongoose.model("Certificate", schema);

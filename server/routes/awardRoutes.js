@@ -1,0 +1,2 @@
+const express=require("express"); const protect=require("../middleware/authMiddleware"); const c=require("../controllers/awardController"); const upload=require("../middleware/certUpload"); const r=express.Router();
+r.get("/public",c.getPublic); r.get("/public/:id",c.getPublicById); r.get("/:id/file",c.getFile); r.get("/",protect,c.getAll); r.post("/",protect,upload.single("pdf"),c.create); r.put("/:id",protect,upload.single("pdf"),c.update); r.delete("/:id",protect,c.remove); r.patch("/:id/toggle",protect,c.toggle); module.exports=r;

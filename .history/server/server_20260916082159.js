@@ -9,44 +9,28 @@ dotenv.config();
 const app = express();
 
 // ==========================================
-// CORS - LOCAL + PRODUCTION
+// CORS - ALLOW ALL LOCAL VITE PORTS
 // ==========================================
-
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:5174",
-  "http://localhost:5175",
-  "http://localhost:5176",
-  "http://localhost:5177",
-  process.env.CLIENT_URL,
-].filter(Boolean);
 
 app.use(
   cors({
     origin: function (origin, callback) {
-      // Allow requests without an Origin
-      // (Postman, server-to-server requests, etc.)
       if (!origin) {
         return callback(null, true);
       }
 
-      // Allow configured origins
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-
-      // Allow any localhost port
+      // Allow localhost with any port
       if (/^http:\/\/localhost:\d+$/.test(origin)) {
         return callback(null, true);
       }
 
-      // Allow any 127.0.0.1 port
+      // Allow 127.0.0.1 with any port
       if (/^http:\/\/127\.0\.0\.1:\d+$/.test(origin)) {
         return callback(null, true);
       }
 
       return callback(
-        new Error(`CORS: Origin not allowed: ${origin}`)
+        new Error("CORS: Origin not allowed")
       );
     },
 
